@@ -146,6 +146,50 @@ header{
 .sousuo_bottom a:first-child{
 	padding-left: 0;
 }
+
+.sousuoer{
+	width: 100%;
+	height: 50px;
+	background: rgba(255,255,255,0.9);
+	position: fixed;
+	display: none;
+	top: 0;
+	left: 0;
+	z-index: 99;
+}
+.sousuoer .sousuoer_center{
+	width: 1190px;
+	margin: 0 auto;
+}
+.sousuoer .sousuoer_center .banner_nav_left{
+	margin-top: 8px;
+	float: left;
+}
+.sousuoer .sousuoer_center .banner_nav_left a{
+	color: #fff;
+	font-weight: bold;
+	
+}
+.sousuoer .sousuoer_center .sousuo_top{
+	border: 1px solid red;
+	margin-top: 4px;
+	margin-left: 190px;
+	float: left;
+}
+.sousuoer .sousuoer_center .d{
+	color: #666;
+	font-size: 12px;
+	line-height: 50px;
+	margin-left: 50px;
+}
+.sousuoer .sousuoer_center .z{
+	font-size: 12px;
+	line-height: 50px;
+	margin-left: 14px;
+	color: #ff6600;
+}
+
+
 .logo_right img{
 	margin-top: 10px;
 	width: 90px;
@@ -2274,7 +2318,7 @@ header{
 	right: auto; 
 	margin-left: -670px; 
 	margin-top: -159.5px; 
-	display: block;
+	display: none;
 }
 .cedaohang_box{
 	padding-top: 9px;
@@ -2286,6 +2330,11 @@ header{
 .cedaohang ul li{
 	width: 100%;
 }
+
+.cedaohang_box ul li.active{
+	background: #ff6600;
+}
+
 .katong{
 	position: absolute;
 	width: 45px;

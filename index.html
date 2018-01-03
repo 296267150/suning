@@ -64,6 +64,22 @@
 			<div class="logo_left">
 				<img class="logo_img" src="img/logo.png.png" alt="" />
 				<img class="logo_right_img" src="img/naifen_07.png"/>
+				<div class="sousuoer">
+					<div class="sousuoer_center">
+					<div class="banner_nav_left">
+						<i class="icon2">&#xe618;</i>
+						<a href="">全部商品分类</a>
+					</div>
+					<div class="sousuo_top">
+						<input type="text" name="" id="" value="" />
+						<a href="">搜索</a>
+						<div class="clear"></div>
+					</div>
+					<a class="d" href="">请登陆</a>
+					<a class="z" href="">注册有礼</a>
+					<div class="clear"></div>
+					</div>
+				</div>
 				<div class="sousuo">
 					<div class="sousuo_top">
 						<input type="text" name="" id="" value="" />
@@ -859,7 +875,7 @@
 			</a>
 		</div>
 	
-		<div class="remenshouji">
+		<div class="louceng remenshouji">
 			<div class="remenshouji_left">
 				<div class="shouji_title">
 					<div class="shouji_title_left">
@@ -1050,7 +1066,8 @@
 			</div>
 		</div>
 		
-		<div class="dq">
+		<!--家用电器-->
+		<div class="louceng dq">
 		<div class="title">
 			<div class="title-name">
 				<p class="name">家用电器</p>
@@ -1204,20 +1221,7 @@
 		</div>
 	</div>
 		
-		<div class="guanggao1">
-			<a href="">
-				<img src="img/guanggao1.jpg" alt="" />
-			</a>
-			<a href="">
-				<img src="img/guanggao2.jpg" alt="" />
-			</a>
-			<a href="">
-				<img src="img/guanggao3.jpg" alt="" />
-			</a>
-		</div>
-		</div>
-		
-		<div class="remenshouji">
+		<div class="louceng remenshouji">
 			<div class="remenshouji_left">
 				<div class="shouji_title">
 					<div class="shouji_title_left">
@@ -1408,7 +1412,7 @@
 			</div>
 		</div>
 		<!--生活家电-->
-		<div class="remenshouji">
+		<div class="louceng remenshouji">
 			<div class="remenshouji_left">
 				<div class="shouji_title">
 					<div class="shouji_title_left">
@@ -1599,7 +1603,7 @@
 			</div>
 		</div>
 		<!--美味生活-->
-		<div class="dq">
+		<div class="louceng dq">
 		<div class="title">
 			<div class="title-name">
 				<p class="name">美味生活</p>
@@ -1753,7 +1757,7 @@
 		</div>
 	</div>
 		<!--美妈萌娃-->
-		<div class="remenshouji">
+		<div class="louceng remenshouji">
 			<div class="remenshouji_left">
 				<div class="shouji_title">
 					<div class="shouji_title_left">
@@ -1944,7 +1948,7 @@
 			</div>
 		</div>
 		<!--服装配饰-->
-		<div class="remenshouji">
+		<div class="louceng remenshouji">
 			<div class="remenshouji_left">
 				<div class="shouji_title">
 					<div class="shouji_title_left">
@@ -2135,7 +2139,7 @@
 			</div>
 		</div>
 		<!--金融-->
-		<div class="remenshouji">
+		<div class="louceng remenshouji">
 			<div class="remenshouji_left">
 				<div class="shouji_title">
 					<div class="shouji_title_left">
@@ -2327,7 +2331,7 @@
 		</div>
 	
 		<!--必抢清单-->
-		<div class="bq">
+		<div class="louceng bq">
 		<div class="content left">
 			<div class="title">
 				<h5>必抢清单</h5>
@@ -2415,7 +2419,7 @@
 	</div>
 	
 		<!--猜你喜欢-->
-		<div class="like">
+		<div class="louceng like">
 		<div class="title">
 			<span></span>
 			<h5>猜你喜欢</h5>
@@ -2793,19 +2797,19 @@
 		<div class="cedaohang">
 			<div class="cedaohang_box">
 				<div class="katong"></div>
-				<ul>
-					<li><a href="">手机电脑</a></li>
-					<li><a href="">家用电器</a></li>
-					<li><a href="">数码汽车</a></li>
-					<li><a href="">生活家装</a></li>
-					<li><a href="">美味生活</a></li>
-					<li><a href="">母婴美妆</a></li>
-					<li><a href="">服饰运动</a></li>
-					<li><a href="">金融阅读</a></li>
-					<li><a href="">清单拼购</a></li>
-					<li><a href="">猜你喜欢</a></li>
+				<ul class="dianji">
+					<li><a href="#">手机电脑</a></li>
+					<li><a href="#">家用电器</a></li>
+					<li><a href="#">数码汽车</a></li>
+					<li><a href="#">生活家装</a></li>
+					<li><a href="#">美味生活</a></li>
+					<li><a href="#">母婴美妆</a></li>
+					<li><a href="#">服饰运动</a></li>
+					<li><a href="#">金融阅读</a></li>
+					<li><a href="#">清单拼购</a></li>
+					<li><a href="#">猜你喜欢</a></li>
 				</ul>
-				<a class="top_dibu"></a>
+				<a class="top_dibu" id="totop"></a>
 			</div>
 		</div>
 	</body>
@@ -2861,7 +2865,66 @@
 			xunhuan("r");	
 		}
 		
+{		
+		let lcdjs=document.querySelectorAll(".dianji li");
+		let lc_box=document.querySelectorAll(".louceng");
+		let sousuos=document.querySelector(".sousuoer");
+		let cedaohang=document.querySelector(".cedaohang");
+		window.onscroll=function(){
+		let st=document.documentElement.scrollTop;
+			if(st>530){
+				sousuos.style.display="block"
+			}else{
+				sousuos.style.display="none"
+			}
+			if(st>2800){
+				cedaohang.style.display="block"
+			}else{
+				cedaohang.style.display="none"
+			}
+			lc_box.forEach(function(ele,index){
+				if(st>=ele.offsetTop){
+					for(let i=0;i<lcdjs.length;i++){
+						lcdjs[i].classList.remove("active");
+					}
+					lcdjs[index].classList.add("active");
+				}
+			})
+		}
+		
+		let totop=document.querySelector("#totop");
+		totop.onclick=function(){
+			//document.documentElement.scrollTop=0;
+			let st=document.documentElement.scrollTop;
+			let speed=st/500*30;
+			let t=setInterval(function(){
+				st-=speed;
+				if(st<=30){
+					st=0;
+					clearInterval(t);
+				}
+				document.documentElement.scrollTop=st;
+			},30)
+		}
 		
 		
+		lcdjs.forEach(function(ele,index){
+			ele.onclick=function(){
+				let foor=lc_box[index].offsetTop;
+				let now=document.documentElement.scrollTop;
+				let speed=(foor-now)*30/300;
+				let time=0;
+				let t=setInterval(function(){
+					time+=30;
+					now+=speed;
+					if(time===300){
+						clearInterval(t);
+					}
+					document.documentElement.scrollTop=now;
+				},30)
+			}
+		})
+		
+}
 	</script>
 </html>
